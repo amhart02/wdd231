@@ -170,4 +170,32 @@ a:hover {
 svg {
   background-color: var(--bs-black);
   fill: white;
+  width: 30px;
 }
+
+/* What I added */
+header {
+  background-color: black;
+}
+
+.global-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+span, a.hero_banner_title {
+  color: white;
+  text-decoration: none;
+}
+
+span:link {
+  text-decoration: none;
+}
+
+#global-nav-toggle {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
