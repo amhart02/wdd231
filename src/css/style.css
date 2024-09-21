@@ -104,6 +104,7 @@ body {
 a:link,
 a:visited {
   color: var(--bs-link-color);
+  text-decoration: none;
 }
 
 a:hover {
@@ -181,14 +182,11 @@ header {
 .global-header {
   display: flex;
   justify-content: space-between;
+  height: 80px;
 }
 
 span, a.hero_banner_title {
   color: white;
-  text-decoration: none;
-}
-
-span:link {
   text-decoration: none;
 }
 
@@ -199,3 +197,80 @@ span:link {
   align-items: center;
 }
 
+.global-header-right {
+  display: flex;
+}
+
+span.national_park_service {
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+svg.icon {
+  height: 40px;
+}
+
+.hero_banner_img {
+  z-index: 1;
+  object-fit: cover;
+}
+
+.hero_banner_content {
+  z-index: 2;
+  position: absolute;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.65);
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero_banner {
+  position: relative;
+}
+
+.hero_banner_subtitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero_banner_title {
+  font-size: 2em;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+}
+
+li a {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 60px;
+  justify-items: center;
+}
+
+li span {
+  grid-row: 1/2;
+  margin-bottom: 0px;
+  height: 20px;
+}
+
+a.search-icon {
+  align-self: center;
+  margin-right: 20px;
+}
+
+button#global-nav-toggle {
+  padding-left: 20px;
+}
+
+a#menu-text {
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
