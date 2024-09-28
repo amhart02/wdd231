@@ -8,8 +8,10 @@ export function parkInfoTemplate(info) {
 
 export function mediaTemplateCard(info) {
     return `<div class="media-card">
-    <img src="${info.image}"/>
+    <a href="${info.link}">
+    <img src="${info.image}" alt="${info.name} class="media-card-img"/>
     <h1>${info.name}</h1>
+    </a>
     <h2>${info.description}</h2>
     </div>
     `;
@@ -18,12 +20,10 @@ export function mediaTemplateCard(info) {
 export function footerTemplate(info) {
     const voice = getPhoneNumber(info.contacts.phoneNumbers);
 
-    return `<section class="contact">
+    return `
     <h1>CONTACT INFO</h1>
     <h2>Phone:</h2>
     <p>${voice}</p>
-    <img src="https://byui-cse.github.io/wdd231-course/images/topo_pattern.png"/>
-    </section>
     `;
 }
 

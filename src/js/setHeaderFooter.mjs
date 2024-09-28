@@ -1,7 +1,7 @@
 import { footerTemplate, parkInfoTemplate } from "./templates.mjs";
 
 function setFooterInfo(data) {
-    const container = document.querySelector("#park-footer");
+    const container = document.querySelector(".contact");
     container.innerHTML = footerTemplate(data);
 }
 
