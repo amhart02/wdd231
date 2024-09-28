@@ -1,6 +1,8 @@
 import { getParkData } from "./parkService.mjs";
+import { getInfoLinks } from "./parkService.mjs";
 
 const parkData = getParkData();
+const infoLinks = getInfoLinks();
 
 function parkInfoTemplate(info) {
     return `<a href="/" class="hero_banner_title">${info.name}</a>
@@ -8,6 +10,13 @@ function parkInfoTemplate(info) {
     <span>${info.designation}</span>
     <span>${info.states}</span>
     </p>`; 
+}
+
+function mediaTemplateCard(info) {
+    return ` <img src="${info.image}"/>
+    <h1>${info.name}</h1>
+    <h2>${info.description}</h2>
+    `;
 }
 
 function setHeaderinfo(data) {
@@ -25,7 +34,12 @@ function setIntroSection(data) {
     <p>${parkData.description}</p>`;
 }
 
-
+function setMediaCard(info) {
+    const infoSection = document.querySelector(".info");
+    const mediaCard = info.map(mediaTemplateCard);
+    infoSection.innerHTML = mediaCard.join("");
+}
 
 setHeaderinfo(parkData);
 setIntroSection(parkData);
+setMediaCard(infoLinks);
