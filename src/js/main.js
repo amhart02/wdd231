@@ -13,9 +13,11 @@ function parkInfoTemplate(info) {
 }
 
 function mediaTemplateCard(info) {
-    return ` <img src="${info.image}"/>
+    return `<div class="media-card">
+    <img src="${info.image}"/>
     <h1>${info.name}</h1>
     <h2>${info.description}</h2>
+    </div>
     `;
 }
 
