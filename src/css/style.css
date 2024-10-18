@@ -324,7 +324,6 @@ a#menu-text {
   font-size: .8em;
   margin: 5px 0px;
 }
-
 .alert-information {
   color: var(--alert-information);
 }
@@ -337,10 +336,60 @@ a#menu-text {
 .alert-caution {
   color: var(--alert-caution);
 }
+.icon_alert {
+  background: none;
+  height: 30px;
+  width: auto;
+}
+.alert {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid lightgray;
+}
+main {
+  padding: 0% 3%;
+}
+main h1 {
+  font-family: 'Times New Roman', Times, serif;
+}
+.alert_info h3 {
+  font-size: 1.5em;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+.alert_info p {
+  margin-top: 0%;
+}
+.alert_list {
+  padding: 0;
+}
+details {
+  border: solid lightgray;
+  padding: 2%;
+  margin-bottom: 3%;
+}
+.visitor_list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0%;
+}
+.visitor-center {
+  border-bottom: solid lightgrey;
+  margin: 2%;
+}
+.activities_list {
+  display: flex;
+  flex-direction: column;
+}
 
 @media (min-width: 750px) {
   .info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .alert_info h3{
+    font-size: 1.25em;
   }
 }

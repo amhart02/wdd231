@@ -29,10 +29,10 @@ export function alertTemplate(alert) {
             alertType = alert.category.toLowerCase();
     }
     return `<li class="alert">
-        <svg class="icon" focusable="false" aria-hidden="true">
+        <svg class="icon icon_alert" focusable="false" aria-hidden="true">
             <use href="${spritePath}#alert-${alertType}"></use>
         </svg>
-        <div>
+        <div class="alert_info">
         <h3 class="alert-${alertType}">${alert.title}</h3>
         <p>${alert.description}</p>
         </div>
