@@ -1,4 +1,8 @@
 :root {
+  --alert-closure: #cb2027;
+  --alert-caution: #ed7e31;
+  --alert-information: #2451a9;
+  --alert-danger: #720f04;
   --bs-black: #000;
   --bs-brown: #393423;
   --bs-grey-2: #444;
@@ -319,6 +323,19 @@ a#menu-text {
 .contact h2, .contact p{
   font-size: .8em;
   margin: 5px 0px;
+}
+
+.alert-information {
+  color: var(--alert-information);
+}
+.alert-danger {
+  color: var(--alert-danger);
+}
+.alert-closure {
+  color: var(--alert-closure);
+}
+.alert-caution {
+  color: var(--alert-caution);
 }
 
 @media (min-width: 750px) {
