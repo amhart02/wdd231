@@ -18,7 +18,6 @@ function setVisitorCenters(info) {
 function setActivities(activity) {
     const activitiesList = document.querySelector(".activities_list");
     const html = activitiesTemplate(activity);
-    console.log(html);
     activitiesList.insertAdjacentHTML("afterbegin", html);
 }
 

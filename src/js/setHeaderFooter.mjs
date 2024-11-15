@@ -1,4 +1,5 @@
 import { footerTemplate, parkInfoTemplate } from "./templates.mjs";
+import { enableNavigation } from "./navigation.mjs";
 
 function setFooterInfo(data) {
     const container = document.querySelector(".contact");
@@ -17,4 +18,5 @@ function setHeaderinfo(data) {
 export function setHeaderFooter(parkData) {
     setFooterInfo(parkData);
     setHeaderinfo(parkData);
+    enableNavigation();
 }

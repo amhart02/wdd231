@@ -107,7 +107,6 @@ body {
 
 a:link,
 a:visited {
-  color: var(--bs-link-color);
   text-decoration: none;
 }
 
@@ -173,12 +172,16 @@ a:hover {
 }
 
 svg {
-  background-color: var(--bs-black);
+  background-color: none;
   fill: white;
   width: 30px;
 }
 
 /* What I added */
+.rotate {
+  transform: rotate(180deg);
+}
+
 header {
   background-color: black;
 }
@@ -232,13 +235,18 @@ span, a.hero_banner_title {
   display: flex;
 }
 
-.global-nav.show {
+.global-nav.show, .global-nav__submenu.show {
   max-height: 1000px;
 }
 
-.global-nav__section-heading {
+.global-nav__section-heading:first-of-type {
   padding-left: 10px;
-  color: white;
+  color: #698e3e;
+}
+
+.global-nav__section-heading:last-of-type {
+  padding-left: 10px;
+  color: #5b9dcd;
 }
 
 #global-nav-toggle {
@@ -246,6 +254,64 @@ span, a.hero_banner_title {
   color: white;
   display: flex;
   align-items: center;
+}
+
+.global-nav__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.global-nav__split-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bs-gray-800);
+}
+
+.global-nav__split-button a {
+  align-self: center;
+  color: white;
+  margin-left: 10px;
+  font-size: 20px;
+  display: block;
+}
+
+.global-nav__split-button button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bs-gray-800);
+  border-left: 1px solid var(--bs-gray-600);
+  padding: 15px 20px;
+}
+
+.global-nav__split-button button:hover {
+  background-color: var(--bs-gray-900);
+}
+
+.global-nav__submenu {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.global-nav__submenu a {
+  color: white;
+}
+
+.global-nav__submenu a:hover {
+  text-decoration: underline;
+}
+
+.global-nav__submenu li {
+  margin: 25px;
+  margin-left: 15px;
 }
 
 .global-header-right {
@@ -299,7 +365,7 @@ ul {
   padding-bottom: 10px;
 }
 
-li a {
+.park_nav li a {
   display: grid;
   grid-template-rows: 1fr 1fr;
   height: 60px;
@@ -438,5 +504,32 @@ details {
   }
   .alert_info h3{
     font-size: 1.25em;
+  }
+  .global-nav__section-heading {
+    display: none;
+  }
+  .global-nav__list:first-of-type {
+    display: none;
+  }
+  .global-nav__submenu {
+    max-height: fit-content;
+  }
+  .global-nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .global-nav__split-button button {
+    display: none;
+  }
+  .global-nav__split-button {
+    background-color: inherit;
+  }
+  .global-nav__submenu li {
+    margin: 15px;
+  }
+  .global-nav__split-button a{
+    margin-bottom: 10px;
+    font-size: 25px;
   }
 }
