@@ -236,7 +236,7 @@ span, a.hero_banner_title {
 }
 
 .global-nav.show, .global-nav__submenu.show {
-  max-height: 1000px;
+  max-height: 1500px;
 }
 
 .global-nav__section-heading:first-of-type {
