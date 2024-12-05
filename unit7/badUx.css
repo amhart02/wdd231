@@ -1,0 +1,33 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: hotpink;
+    width: 1000px;
+    color: black;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 80px;
+  }
+  
+  img {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  form {
+    margin: 20px;
+    background-color: hotpink;
+  }

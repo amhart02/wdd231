@@ -18,7 +18,7 @@ export async function getJson(url) {
 }
 
 export async function getParkData() {
-  const parkData = await getJson("parks?parkCode=glac");
+  const parkData = await getJson("parks?parkCode=yell");
   return parkData.data[0];
 }
 
@@ -38,6 +38,13 @@ export async function getAlerts(code) {
 export async function getVisitorCenterData(parkCode) {
   const visitorCenterData = await getJson(`visitorcenters?parkCode=${parkCode}`);
   return visitorCenterData.data;
+}
+
+export async function getParkVisitorCenterDetails(id) {
+  console.log(id);
+  const parkVisitorCenter = await getJson(`visitorCenters?id=${id}`);
+  console.log(parkVisitorCenter);
+  return parkVisitorCenter.data[0];
 }
 
 const park = {
