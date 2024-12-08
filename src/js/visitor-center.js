@@ -54,20 +54,14 @@ function buildPage(data) {
     );
     // gallery section
     const galleryHTML = listTemplate(data.images, vcImageTemplate);
-    document
-      .querySelector(".vc-gallery")
-      .insertAdjacentHTML("beforeend", galleryHTML);
+    document.querySelector(".vc-gallery").insertAdjacentHTML("beforeend", galleryHTML);
   }
   
 
 async function init() {
     const parkData = await getParkData();
-    console.log(parkData);
     const id = getParam("id");
-    console.log(id);
-    const centerDetails = await getParkVisitorCenterDetails(id);
-    console.log(centerDetails);
-    
+    const centerDetails = await getParkVisitorCenterDetails(id);    
     setHeaderFooter(parkData);
     buildPage(centerDetails);
 }
