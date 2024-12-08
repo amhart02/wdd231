@@ -9,15 +9,12 @@ function getParam(param) {
 }
 
 function buildPage(data) {
-    // since we have all the structure in place in the HTML, this solution chooses to insert content into the existing structure instead of generating all the structure with the content
     document.querySelector(".vc-name").innerHTML = vcTitleTemplate(data.name);
     document.querySelector(".vc-info").innerHTML = vcInfoTemplate(data);
-    const detailsEl = document.querySelector(".vc-details-list");
-    detailsEl.innerHTML = "";
-    // addresses section
+    const details = document.querySelector(".vc-details-list");
+    details.innerHTML = "";
     const addressHTML = vcAddressesListTemplate(data.addresses);
-    detailsEl.insertAdjacentHTML(
-      "beforeend",
+    details.insertAdjacentHTML("beforeend",
       vcDetailsTemplate(
         "vcAddresses",
         "Addresses",
@@ -25,9 +22,7 @@ function buildPage(data) {
         addressHTML
       )
     );
-    // directions
-    detailsEl.insertAdjacentHTML(
-      "beforeend",
+    details.insertAdjacentHTML("beforeend",
       vcDetailsTemplate(
         "vcDirections",
         "Directions",
@@ -35,10 +30,8 @@ function buildPage(data) {
         vcDirectionsTemplate(data.directionsInfo)
       )
     );
-    // amenities section.
     const amenitiesHTML = listTemplate(data.amenities, vcAmenityTemplate);
-    detailsEl.insertAdjacentHTML(
-      "beforeend",
+    details.insertAdjacentHTML("beforeend",
       vcDetailsTemplate(
         "vcAmenities",
         "Amenities",
@@ -46,13 +39,10 @@ function buildPage(data) {
         amenitiesHTML
       )
     );
-    // contact section
     const contactHTML = vcContactsTemplate(data.contacts);
-    detailsEl.insertAdjacentHTML(
-      "beforeend",
+    details.insertAdjacentHTML("beforeend",
       vcDetailsTemplate("vcContacts", "Contacts", "phone", contactHTML)
     );
-    // gallery section
     const galleryHTML = listTemplate(data.images, vcImageTemplate);
     document.querySelector(".vc-gallery").insertAdjacentHTML("beforeend", galleryHTML);
   }
